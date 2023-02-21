@@ -14,7 +14,7 @@ Run in this directory to build and run the app:
 docker compose up
 ```
 
-The `vote` app will be running at [http://localhost:5000](http://localhost:5000), and the `results` will be at [http://localhost:5001](http://localhost:5001).
+The `vote` app will be running at [http://localhost:5050](http://localhost:5050), and the `results` will be at [http://localhost:5001](http://localhost:5001).
 
 Alternately, if you want to run it on a [Docker Swarm](https://docs.docker.com/engine/swarm/), first make sure you have a swarm. If you don't, run:
 
@@ -50,11 +50,11 @@ kubectl delete -f k8s-specifications/
 
 ![Architecture diagram](architecture.png)
 
-* A front-end web app in [Python](/vote) which lets you vote between two options
-* A [Redis](https://hub.docker.com/_/redis/) which collects new votes
-* A [.NET](/worker/) worker which consumes votes and stores them in…
-* A [Postgres](https://hub.docker.com/_/postgres/) database backed by a Docker volume
-* A [Node.js](/result) web app which shows the results of the voting in real time
+- A front-end web app in [Python](/vote) which lets you vote between two options
+- A [Redis](https://hub.docker.com/_/redis/) which collects new votes
+- A [.NET](/worker/) worker which consumes votes and stores them in…
+- A [Postgres](https://hub.docker.com/_/postgres/) database backed by a Docker volume
+- A [Node.js](/result) web app which shows the results of the voting in real time
 
 ## Notes
 
